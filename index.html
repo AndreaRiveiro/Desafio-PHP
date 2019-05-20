@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Todos os Produtos</h1>
+            <table>
+                <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço</th>    
+                </tr>
+            </tr>
+            </table>
+        </div>
+        <div>
+            <form id="cadastro" action="cadastro.php" method="POST">
+                <h3>Cadastro de Produtos</h3>
+               <label>Nome:<br></label>
+                <input id="nome" type="text" name="nome" placeholder="Digite seu nome">
+                <br>
+                <label>Categoria:<br></label>
+                <select id="categoria" name="categoria" aria-placeholder="Escolha a categoria">
+                    <option value="">Escolha uma Categoria</option> 
+                    <option value="valor2" selected>Casual</option>
+                    <option value="valor3">Esport</option>
+                    <option value="valor3">Social</option>
+                  </select>
+                  <br>
+                <label>Quantidade:<br></label>
+                <input id="quant" type="number" name="quant" placeholder="Digite a quantidade">
+                <br>
+                <labe>Preço<br></labe>
+                <input id="preco" type="number" name="preco" placeholder="Digite o preço">
+                <br>
+                <label>Foto do Produto:<br></label>
+                <input id="carregaImg" type="file" name="file">Escolher Arquivo
+                <button id="enviar" type="submit" form="cadastro"  formmethod="POST">Enviar</button>
+
+            </form>
+        </div>
+
+    </section>
+    
+    <script src="Validar.js"></script>   
+</body>
+</html>
