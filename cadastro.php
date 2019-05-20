@@ -1,12 +1,12 @@
 <?php
-    $nome = $_Pot["nome"];
+    $nome = $_POST["nome"];
     $categoria = $_POST["categoria"];
     $quant = $_POST["quant"];
     $preco = $_POST["preco"];
     $file = $_POST["file"];
 
-function salvarProduto("$novoProduto"){
-    if (!file_existis("produtos.json")) {
+function salvarProduto($novoProduto){
+    if (!file_exists("produtos.json")) {
        $incluir ["listaProdutos"] = [$novoProduto];
        $jsonProdutos = json_encode ($produtos);
        file_put_contents("produtos.json", $jsonProdutos);
@@ -20,6 +20,8 @@ function salvarProduto("$novoProduto"){
         echo "<script>alert('Produto salvo com sucesso!')</script>"; 
     }
     
-}
+};
+
+salvarProduto($_POST);
 
 ?>
